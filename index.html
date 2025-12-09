@@ -5,42 +5,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chrømex</title>
   <style>
-    body { margin: 0; font-family: Arial, sans-serif; background: #000; color: #fff; }
-    header { padding: 20px; text-align: center; font-size: 32px; font-weight: bold; }
-    .hero { padding: 40px 20px; text-align: center; }
-    .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; padding: 20px; }
-    .product { background: #111; padding: 15px; border-radius: 10px; text-align: center; }
-    .product img { width: 100%; border-radius: 8px; }
-    footer { padding: 20px; text-align: center; opacity: 0.7; font-size: 14px; }
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    body { margin: 0; font-family: 'Poppins', sans-serif; background: #0a0a0a; color: #fff; }
+    header { padding: 25px; text-align: center; font-size: 36px; font-weight: 600; letter-spacing: 2px; }
+
+    .hero { padding: 60px 20px; text-align: center; }
+    .hero h2 { font-size: 32px; margin-bottom: 10px; }
+    .hero p { font-size: 18px; opacity: 0.8; }
+
+    .products {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .product {
+      background: #111;
+      padding: 20px;
+      border-radius: 14px;
+      text-align: center;
+      transition: 0.3s;
+      border: 1px solid #222;
+    }
+    .product:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(255,255,255,0.08); }
+
+    .product img { width: 100%; border-radius: 10px; margin-bottom: 10px; }
+    .product h3 { font-size: 20px; margin: 10px 0 5px; }
+    .product p { font-size: 17px; opacity: 0.9; }
+
+    footer { padding: 30px; text-align: center; opacity: 0.55; font-size: 14px; }
   </style>
 </head>
 <body>
-  <header>CHRØMEX</header>
+  <header>
+    <nav style="display:flex; justify-content:center; gap:40px; font-size:18px; padding:20px; background:#0f0f0f; backdrop-filter:blur(10px); position:sticky; top:0;">
+      <a href="#home" style="color:white; text-decoration:none;">Home</a>
+      <a href="#products" style="color:white; text-decoration:none;">Shop</a>
+      <a href="#contact" style="color:white; text-decoration:none;">Contact</a>
+    </nav>
+    <div style="text-align:center; font-size:40px; margin-top:20px; letter-spacing:2px;">CHRØMEX</div>
+  </header>
 
-  <div class="hero">
+  <section id="home" class="hero">
     <h2>Premium Accessories. Affordable Prices.</h2>
     <p>Necklaces • Bracelets • Rings • Y2K Style</p>
-  </div>
+  </section>
 
-  <div class="products">
+  <section id="products" class="products">
     <div class="product">
       <img src="PRODUCT1.jpg" alt="Product 1">
       <h3>Bracelet Name</h3>
-      <p>$9.99</p>
+      <div style="margin-top:10px; display:flex; justify-content:center; gap:12px;">
+        <a href="product1.html" style="padding:8px 14px; background:#222; border-radius:8px; color:white; text-decoration:none;">View</a>
+        <a href="https://instagram.com" style="padding:8px 14px; background:#444; border-radius:8px; color:white; text-decoration:none;">Instagram</a>
+      </div>
     </div>
 
     <div class="product">
       <img src="PRODUCT2.jpg" alt="Product 2">
       <h3>Necklace Name</h3>
-      <p>$14.99</p>
+      <div style="margin-top:10px; display:flex; justify-content:center; gap:12px;">
+        <a href="product2.html" style="padding:8px 14px; background:#222; border-radius:8px; color:white; text-decoration:none;">View</a>
+        <a href="https://instagram.com" style="padding:8px 14px; background:#444; border-radius:8px; color:white; text-decoration:none;">Instagram</a>
+      </div>
     </div>
 
     <div class="product">
       <img src="PRODUCT3.jpg" alt="Product 3">
       <h3>Ring Name</h3>
-      <p>$5.99</p>
+      <div style="margin-top:10px; display:flex; justify-content:center; gap:12px;">
+        <a href="product3.html" style="padding:8px 14px; background:#222; border-radius:8px; color:white; text-decoration:none;">View</a>
+        <a href="https://instagram.com" style="padding:8px 14px; background:#444; border-radius:8px; color:white; text-decoration:none;">Instagram</a>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <section id="contact" style="text-align:center; padding:60px 20px;">
+    <h2>Contact Us</h2>
+    <p>For orders & questions</p>
+    <a href="https://wa.me/35500000000" style="margin-top:15px; display:inline-block; padding:12px 22px; background:#222; border-radius:10px; text-decoration:none; color:white;">WhatsApp Us</a>
+  </section>
 
   <footer>© 2025 Chrømex</footer>
 </body>
